@@ -1,3 +1,5 @@
+const path = require('path');
+
 const express = require('express')
 const bodyParser = require('body-parser');
 const router = require('./routers/index.js');
@@ -5,6 +7,8 @@ const router = require('./routers/index.js');
 
 const app = express();
 const port = 3000;
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
