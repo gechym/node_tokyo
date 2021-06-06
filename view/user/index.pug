@@ -1,0 +1,11 @@
+h1 user 
+a(href="/user/create") create
+form(action="/user/search")
+    input(type="text" name="q")
+    button search
+ul 
+    each use, index in users 
+        li= index + ":" + use.name
+        a(href="/user/"+ use.id ) view 
+    else
+        li There are no values
