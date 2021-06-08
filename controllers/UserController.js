@@ -41,22 +41,7 @@ class UserController {
     // POST /user/create
     postCreate(req, res){
         req.body.id = shortid.generate();
-        var errs =[]
-        if(!req.body.name){
-            errs.push('Tên không được để trống');
-        }
-
-        if(!req.body.phone){
-            errs.push('SĐT không được để trống');
-        }
-
-        if(errs.length){
-            res.render('user/create', {
-                errs : errs,
-                values : req.body
-            })
-            return
-        }
+        
         db.get('user').push(req.body).write();
         res.redirect('/user');
     }
