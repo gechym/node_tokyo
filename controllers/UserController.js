@@ -41,6 +41,8 @@ class UserController {
     // POST /user/create
     postCreate(req, res){
         req.body.id = shortid.generate();
+
+        console.log(res.locals);
         
         db.get('user').push(req.body).write();
         res.redirect('/user');

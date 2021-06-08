@@ -15,7 +15,7 @@ module.exports.userValidar = function (req, res, next) {
             })
             return
         }
-
+        res.locals.test = "hello các bạn";
         next();
 }
 // cách 2 
