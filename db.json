@@ -1,32 +1,19 @@
 {
   "user": [
     {
-      "name": "123",
-      "id": "qRb2T3Js2"
+      "name": "nguyễn Đức Bảo",
+      "phone": "0789440709",
+      "id": "NphW0ky_Z"
     },
     {
-      "name": "12",
-      "id": "efBL_hnHx"
+      "name": "ádasdasd",
+      "phone": "ádasd",
+      "id": "TRbs3IwIF"
     },
     {
-      "name": "123",
-      "id": "Cg_0z88S_"
-    },
-    {
-      "name": "123",
-      "id": "V-2Beb9On"
-    },
-    {
-      "name": "123",
-      "id": "85QwW7ILt"
-    },
-    {
-      "name": "",
-      "id": "J-fv1boHW"
-    },
-    {
-      "name": "",
-      "id": "Gb_hH6qQW"
+      "name": "ádasdasd",
+      "phone": "ádasd",
+      "id": "0ktGCaYLi"
     }
   ]
 }

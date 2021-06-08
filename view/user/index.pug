@@ -2,10 +2,21 @@ extends ../layouts/layout.pug
 
 block content
     h1 user 
-    a(href="/user/create") create
-    ul 
+    a.btn.btn-primary(href="/user/create") create
+    
+    table.table 
+        tr 
+            th #No 
+            th Name 
+            th Phone 
+            th 
         each use, index in users 
-            li= index + ":" + use.name
-            a(href="/user/"+ use.id ) view 
+            tr
+                td= index + 1
+                td= use.name 
+                td= use.phone
+                td 
+                    a(href="/user/"+ use.id ) view 
         else
-            li There are no values
+            tr 
+                td="There are no values"

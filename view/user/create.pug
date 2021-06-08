@@ -1,7 +1,18 @@
 extends ../layouts/layout.pug
 
 block content
-    h1 Create User 
-    form(action="/user/create" method="POST" ) 
-        input(type="text" name="name")
-        button create
+    h1 Create User
+
+    if errs
+        each err in errs
+            .alert.alert-danger= err
+            
+    form(action="/user/create" method="POST" )
+        .form-group 
+            label(for="name")   Name  &nbsp;    
+            input#name.form-control(type="text" name="name" placeholder="Name ..." value= values? values.name : "")
+            br
+            label(for="Phone") Phone  &nbsp;
+            input#phone.form-control(type="text" name="phone" placeholder="+0123456789" value= values? values.phone : "")
+            br
+        button.btn.btn-primary create
