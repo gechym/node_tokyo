@@ -24,7 +24,7 @@ class UserController {
 
     //GET /user/show/:id    
     show(req, res) {
-        var id = req.params.id;
+        var id = req.params._id;
         console.log(id);
         var use = db.get('user').find({ id : id }).value();
         console.log(use)
@@ -41,6 +41,7 @@ class UserController {
     // POST /user/create
     postCreate(req, res){
         req.body.id = shortid.generate();
+        req.body.avatar = req.file.path.split('\\').slice(1).join('\\')
 
         console.log(res.locals);
         

@@ -13,7 +13,14 @@ class ProdController {
         // localStorage.setItem('page',JSON.stringify(page));
         // var test = window.localStorage;
 
-        
+
+        // phần code để fix bằng sẽ fix bằng req.local
+        // if(req.signedCookies.userId){
+        //     res.clearCookie("fixxCmnrBug");
+        // }else{
+        //     res.cookie('fixxCmnrBug' ,'ádkjhasdkjhasdkjhaskdhaksjd');
+        // }
+
         res.cookie('page', page);
 
         res.render('products/prod',{

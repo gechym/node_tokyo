@@ -7,7 +7,6 @@ module.exports.userValidar = function (req, res, next) {
         if(!req.body.phone){
             errs.push('SĐT không được để trống');
         }
-
         if(errs.length){
             res.render('user/create', {
                 errs : errs,
@@ -15,7 +14,6 @@ module.exports.userValidar = function (req, res, next) {
             })
             return
         }
-        res.locals.test = "hello các bạn";
         next();
 }
 // cách 2 

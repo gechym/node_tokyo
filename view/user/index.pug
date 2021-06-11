@@ -5,13 +5,16 @@ block content
     a.btn.btn-primary(href="/user/create") create
     
     table.table 
-        tr 
+        tr  
+            th avatar
             th #No 
             th Name 
             th Phone 
-            th 
+            th Action
         each use, index in users 
             tr
+                td 
+                    img(src='/' + use.avatar, alt="lỗi", width="200")
                 td= index + 1
                 td= use.name 
                 td= use.phone
