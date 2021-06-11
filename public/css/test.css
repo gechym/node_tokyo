@@ -1,3 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
 .img {
     margin: 100px;
+}
+
+
+
+.pagination-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.pagination .pagination-list{
+    display: flex;
+    background-color: #FFF;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.pagination .pagination-list li{
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #21B2AB;
+    transition: all 0.3s ease;
+}
+.pagination .pagination-list li.dots {
+    font-size: 22px;
+    cursor: default;
+}
+.pagination .pagination-list li.numb {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin: 0px 4px;
+}
+
+
+.pagination .pagination-list li.btn {
+    padding: 0px 20px;
+    /* background-color: #FAEBD7; */
+}
+
+.pagination .pagination-list li.prev{
+    border-radius: 25px 25px 25px 25px;
+}
+
+.pagination .pagination-list li.next{
+    border-radius: 25px 25px 25px 25px;
+}
+
+.pagination .pagination-list li.active,
+.pagination .pagination-list li.numb:hover,
+.pagination .pagination-list li.btn:hover{
+    background-color: #21B2AB;
+    border-radius: 50px;
+    color: #FFF;
 }

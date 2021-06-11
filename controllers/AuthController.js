@@ -1,5 +1,6 @@
+const md5 = require('md5');
 const db = require('../db/index.js');
-const shortid = require('shortid');
+
 
 class AuthController{
     login(req, res){
@@ -19,16 +20,18 @@ class AuthController{
             });
             return;
         }
-        
+        var md5Password = md5(password);
         // db.get('user').find('user')
-        if(use.password !== password){
+        if(use.password !== md5Password){
             res.render('auth/login', {
                 errs : ['Email hoặc mật khẩu không đúng'],
                 value : req.body
             });
             return;
         }
-        res.cookie('userId', use.id);
+        res.cookie('userId', use.id, {
+            signed : true,
+        });
         res.redirect('/user');
     }
 }

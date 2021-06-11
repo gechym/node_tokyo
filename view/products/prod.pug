@@ -1,0 +1,39 @@
+extends ../layouts/layout.pug
+
+block content
+    .mt-4
+        .row
+            each prod in product 
+                .col-sm-6.col-lg-3.mt-4
+                    .card(style='width: 16rem;')
+                        a(href='')
+                            img.card-img-top(src=prod.image , alt='')
+                        .card-body
+                            a(href='')
+                                h5.card-title= prod.name
+                            p.card-text= prod.description 
+                            a.btn.btn-primary(href='') mua
+        .row.pagination-box
+            .pagination
+                ul.pagination-list
+                    li.btn.prev
+                        i.fas.fa-angle-left 
+                        span &nbsp; Prev
+                    li.numb.active
+                        span 1
+                    li.numb
+                        span 2
+                    li.dots
+                        span ...
+                    li.numb
+                        span 4
+                    li.numb
+                        span 5
+                    li.dots
+                        span ...
+                    li.numb
+                        span 7
+                    li.btn.next
+                        span Next &nbsp;
+                            i.fas.fa-angle-right
+
