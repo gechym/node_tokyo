@@ -625,10 +625,13 @@
   ],
   "sessions": [
     {
-      "id": "2IoFGYce7"
-    },
-    {
-      "id": "s8NkYSfGf"
+      "id": "EaGR2E2uO",
+      "cart": {
+        "db1cc913-5f37-4eed-b4f9-5759406ec256": 20,
+        "1437bbee-7a9f-46b6-a866-45faf3a212da": 2,
+        "290c2c74-081e-446b-90b3-7c79f8950ce6": 2,
+        "3daf05dd-1c39-4730-bcff-08b0ce55da5c": 2
+      }
     }
   ]
 }

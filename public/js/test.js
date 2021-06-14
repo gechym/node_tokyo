@@ -1,7 +1,7 @@
 function element(totalPages, page){
     var liTag='';
     var beforePage = page - 1 ;
-    var afterPage = page  + 3;
+    var afterPage = page  + 2;
     var liActive = '';
 
     if(page > 1){
