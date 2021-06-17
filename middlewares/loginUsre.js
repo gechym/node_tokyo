@@ -11,7 +11,7 @@ module.exports.loginUser = function(req, res, next){
         return;
     }
     res.locals._user = user;
-    res.locals._host = req.get('host');
+    // res.locals._host = req.get('host'); để lấy tên host
     
     next();
 } 

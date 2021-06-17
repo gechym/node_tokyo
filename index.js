@@ -3,11 +3,12 @@ require('dotenv').config();
 const path = require('path');
 
 const express = require('express')
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser')
 const router = require('./routers/index.js');
-const middlewares = require('./middlewares/loginUsre');
+const routerApi = require('./api/routers/index.js');
 const sessionMiddleware = require('./middlewares/session');
+// var csurf = require('csurf');
 
 const app = express();
 const port = 3000;
@@ -15,9 +16,10 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(sessionMiddleware);
+// app.use(csurf({ cookie: true }));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
+app.use(express.json());
+app.use(express.urlencoded({
     extended: true
 }));
 
@@ -32,6 +34,7 @@ app.get('/',(req, res) => {
   });
 });
 
+routerApi(app);
 router(app);
 
 app.listen(port, () => {
